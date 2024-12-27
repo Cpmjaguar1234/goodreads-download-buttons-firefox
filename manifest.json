@@ -3,6 +3,11 @@
     "name": "Goodreads Download Buttons",
     "version": "1.0.0",
     "description": "Adds download buttons to Goodreads.",
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "goodreads-download@example.com"
+        }
+    },
     "permissions": [
         "activeTab",
         "webNavigation",
