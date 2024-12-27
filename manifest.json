@@ -1,9 +1,15 @@
 {
   "manifest_version": 2,
   "name": "Goodreads Download Buttons",
-  "version": "1.0.0",
-  "description": "Adds download buttons to Goodreads.",
+  "version": "1.0",
+  "description": "Adds download buttons to Goodreads book pages to help find books on various download sites.",
   
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "goodreads-download-buttons"
+    }
+  },
+
   "icons": {
     "16": "assets/icon.png",
     "32": "assets/icon.png",
@@ -11,10 +17,16 @@
     "128": "assets/icon.png"
   },
 
+  "browser_action": {
+    "default_icon": {
+      "16": "assets/icon.png",
+      "32": "assets/icon.png"
+    }
+  },
+
   "permissions": [
     "webNavigation",
-    "activeTab",
-    "https://www.goodreads.com/*"
+    "*://www.goodreads.com/*"
   ],
 
   "background": {
@@ -23,18 +35,8 @@
 
   "content_scripts": [
     {
-      "matches": ["https://www.goodreads.com/book/*"],  
-      "js": ["content/styles.js", "content/button.js", "content/main.js"]
+      "matches": ["*://www.goodreads.com/book/*"],
+      "js": ["content/main.js", "content/button.js", "content/styles.js"]
     }
-  ],
-
-  "browser_action": {
-    "default_title": "Goodreads Download Buttons",
-    "default_icon": {
-      "16": "assets/icon.png",
-      "32": "assets/icon.png",
-      "48": "assets/icon.png",
-      "128": "assets/icon.png"
-    }
-  }
+  ]
 } 
