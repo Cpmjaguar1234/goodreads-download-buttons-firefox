@@ -1,9 +1,10 @@
-browser.webNavigation.onCompleted.addListener((details) => {
+chrome.webNavigation.onCompleted.addListener((details) => {
     if (details.frameId !== 0) {
         return;
     }
 
-    browser.tabs.executeScript(details.tabId, {
-        file: "content/main.js"
+    chrome.scripting.executeScript({
+        target: { tabId: details.tabId },
+        files: ["content/main.js"]
     });
-}, { urls: ["*://*/*"] });
+}, { url: [{ schemes: ['http', 'https'] }] });
