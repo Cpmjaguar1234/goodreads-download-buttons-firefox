@@ -1,26 +1,23 @@
 {
-    "manifest_version": 3,
+    "manifest_version": 2,
     "name": "Goodreads Download Buttons",
     "version": "1.0.0",
     "description": "Adds download buttons to Goodreads.",
     "permissions": [
-        "scripting",
+        "activeTab",
         "webNavigation",
-        "activeTab" 
-    ],
-    "host_permissions": [
-        "https://www.goodreads.com/*"
+        "*://www.goodreads.com/*"
     ],
     "background": {
-        "service_worker": "background/main.js"
+        "scripts": ["background/main.js"]
     },
     "content_scripts": [
         {
-            "matches": ["https://www.goodreads.com/book/*"],  
-            "js": ["content/styles.js", "content/button.js"]
+            "matches": ["*://www.goodreads.com/book/*"],
+            "js": ["content/styles.js", "content/button.js", "content/main.js"]
         }
     ],
-    "action": {
+    "browser_action": {
         "default_title": "Goodreads Download Buttons"
     },
     "icons": {
