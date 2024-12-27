@@ -23,13 +23,7 @@ Since this extension isn't published on the Firefox Add-ons store, you'll need t
 5. Navigate to the folder where you extracted the files
 6. Select the `manifest.json` file
 
-Note: This is a temporary installation that will be removed when you close Firefox. To make it permanent, you'll need to:
-1. Zip all the extension files
-2. Go to `about:addons`
-3. Click the gear icon ⚙️
-4. Select "Install Add-on From File"
-5. Choose your zip file
-
+Note: This is a temporary installation that will be removed when you close Firefox. 
 ## Usage
 
 1. Visit any book page on Goodreads (URLs starting with `https://www.goodreads.com/book/`)
