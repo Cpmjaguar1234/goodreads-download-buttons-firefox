@@ -14,14 +14,15 @@ A Firefox extension that enhances your Goodreads experience by adding convenient
 
 ## Installation Instructions
 
-Since this extension isn't published on the Firefox Add-ons store, you'll need to install it temporarily for development:
-
-1. Download this repository (Code → Download ZIP) and extract it to a folder
-2. Open Firefox and type `about:debugging` in the address bar
-3. Click on "This Firefox" in the left sidebar
-4. Click "Load Temporary Add-on"
-5. Navigate to the folder where you extracted the files
-6. Select the `manifest.json` file
+1. Download this repository (Code → Download ZIP)
+2. Extract the ZIP file
+3. Select all files and folders (manifest.json, assets/, background/, content/)
+4. Create a new ZIP file containing these files (make sure manifest.json is at the root level, not inside a folder)
+5. Open Firefox and go to `about:addons`
+6. Click the gear icon (⚙️) in the top right
+7. Select "Install Add-on From File..."
+8. Choose your ZIP file
+9. Click "Add" when prompted
 
 Note: This is a temporary installation that will be removed when you close Firefox. 
 ## Usage
