@@ -24,7 +24,6 @@ A Firefox extension that enhances your Goodreads experience by adding convenient
 8. Choose your ZIP file
 9. Click "Add" when prompted
 
-Note: This is a temporary installation that will be removed when you close Firefox. 
 ## Usage
 
 1. Visit any book page on Goodreads (URLs starting with `https://www.goodreads.com/book/`)
